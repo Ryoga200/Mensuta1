@@ -1,0 +1,18 @@
+<%= render 'posts/error', object: @post_new %>
+<div class="contents">
+<%= form_with model: @post_new do |f| %>
+   <p>店名</p>
+    <%= f.text_field :shop ,required: true%>
+   <p>種類</p>
+<%= f.select :food, [['ラーメン', 'ラーメン'], ['混ぜそば', '混ぜそば'], ['パスタ', 'パスタ'], ['焼きそば', '焼きそば'], ['うどん', 'うどん'], ['そば', 'そば'], ['その他', 'その他']], {include_blank: '選択してください'}, { class: "user_class" ,required: true } %>
+   <%# <input type="text" name="food"> %>
+   <p>料理名</p>
+    <%= f.text_field :name ,required: true%>
+   <p>感想</p>
+    <%= f.text_field :content ,required: true%><br>
+
+   <%= f.file_field :image, class: 'form-control mb-3', accept: 'image/*' ,required: true %>
+   <%#= f.hidden_field :post_image_cache %>
+   <%= f.submit %>
+<% end %>
+</div>

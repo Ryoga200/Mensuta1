@@ -1,0 +1,24 @@
+<div class="contents">
+    <h1>自己紹介</h1>
+    <%=@user.introduction%>
+    <%if @user==current_user%>
+    <%= form_with model: @user do |f| %>
+   <p>名前</p>
+    <%= f.text_field :name%>
+   <p>プロフィール文</p>
+   <%= f.text_area :introduction%>
+   <%= f.submit %>
+    <% end %>
+    <%end%>
+    <h1><%=@user.name%>さんの投稿</h1>
+    <%@posts.each do |post|%>
+    <%= image_tag post.image_url, class: 'card-img-top' %>
+    <p>店名：<span><%= post.shop %></span>　　　<%if @user==current_user%>
+    <%=link_to "編集する",edit_post_path(post),class: 'btn' 'btn-success'%>
+    <%end%></p>
+    <p>料理の種類：<span><%= post.food %></span></p>
+    <p>商品名：<span><%= post.name %></span></p>
+    <p>感想：<span><%= post.content %></span>
+    </p>
+    <%end%>
+</div>
