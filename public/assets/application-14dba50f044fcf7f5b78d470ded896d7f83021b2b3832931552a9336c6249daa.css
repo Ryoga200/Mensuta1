@@ -1,0 +1,50 @@
+/* line 4, app/assets/stylesheets/indexs.scss */
+.body {
+  background-color: black;
+}
+/* line 1, app/assets/stylesheets/indexs/new.scss */
+.post_new {
+  width: 70%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 16, app/assets/stylesheets/application.scss */
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: bisque;
+}
+
+/* line 21, app/assets/stylesheets/application.scss */
+.topleft {
+  float: left;
+}
+
+/* line 24, app/assets/stylesheets/application.scss */
+.leftimage {
+  width: 200px;
+}
+
+/* line 27, app/assets/stylesheets/application.scss */
+.topright {
+  float: right;
+  margin: 20px;
+}
+
+/* line 31, app/assets/stylesheets/application.scss */
+.floatset {
+  clear: right;
+}
